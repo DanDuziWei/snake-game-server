@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: snake-game-server
+    env: node
+    buildCommand: |
+      npm install
+      cd server && npm install
+    startCommand: npm run server
+    envVars:
+      - key: NODE_ENV
+        value: production
